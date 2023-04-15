@@ -1,0 +1,8 @@
+FROM mysql:5.7
+
+
+#将所需文件放到容器中
+
+COPY init.sql /docker-entrypoint-initdb.d
+
+#设置容器启动时执行的命令
